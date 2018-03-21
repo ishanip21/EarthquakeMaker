@@ -13,9 +13,11 @@
 		86715D5B20625EE8004A7EAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86715D5920625EE8004A7EAD /* LaunchScreen.storyboard */; };
 		86715D6F20628C6E004A7EAD /* EMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86715D6E20628C6E004A7EAD /* EMHomeViewController.swift */; };
 		86715D73206296BC004A7EAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86715D72206296BC004A7EAD /* Constants.swift */; };
+		D69A9BB4F050FABC146AC94D /* Pods_EarthquakeMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C79A6988D58DE0DC56975C /* Pods_EarthquakeMaker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160B10DF3B8E5414D087D39C /* Pods-EarthquakeMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarthquakeMaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EarthquakeMaker/Pods-EarthquakeMaker.debug.xcconfig"; sourceTree = "<group>"; };
 		86715D4D20625EE8004A7EAD /* EarthquakeMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthquakeMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86715D5020625EE8004A7EAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86715D5520625EE8004A7EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		86715D5C20625EE8004A7EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86715D6E20628C6E004A7EAD /* EMHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMHomeViewController.swift; sourceTree = "<group>"; };
 		86715D72206296BC004A7EAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C8C79A6988D58DE0DC56975C /* Pods_EarthquakeMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EarthquakeMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE2E2A0F77AEF96328AD8B2C /* Pods-EarthquakeMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarthquakeMaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-EarthquakeMaker/Pods-EarthquakeMaker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D69A9BB4F050FABC146AC94D /* Pods_EarthquakeMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		635CB72B8B488525B53614E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				160B10DF3B8E5414D087D39C /* Pods-EarthquakeMaker.debug.xcconfig */,
+				EE2E2A0F77AEF96328AD8B2C /* Pods-EarthquakeMaker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		86715D4420625EE7004A7EAD = {
 			isa = PBXGroup;
 			children = (
 				86715D4F20625EE8004A7EAD /* EarthquakeMaker */,
 				86715D4E20625EE8004A7EAD /* Products */,
+				635CB72B8B488525B53614E1 /* Pods */,
+				D7D727AE3DC342DF9D7875FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +115,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		D7D727AE3DC342DF9D7875FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8C79A6988D58DE0DC56975C /* Pods_EarthquakeMaker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86715D5F20625EE8004A7EAD /* Build configuration list for PBXNativeTarget "EarthquakeMaker" */;
 			buildPhases = (
+				D9C627619C5708E4BB1402C8 /* [CP] Check Pods Manifest.lock */,
 				86715D4920625EE7004A7EAD /* Sources */,
 				86715D4A20625EE7004A7EAD /* Frameworks */,
 				86715D4B20625EE7004A7EAD /* Resources */,
+				D9CF48DED83AF8DE990621AD /* [CP] Embed Pods Frameworks */,
+				81B1174B55E162ADBB75C545 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +192,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81B1174B55E162ADBB75C545 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EarthquakeMaker/Pods-EarthquakeMaker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9C627619C5708E4BB1402C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EarthquakeMaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9CF48DED83AF8DE990621AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EarthquakeMaker/Pods-EarthquakeMaker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EarthquakeMaker/Pods-EarthquakeMaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86715D4920625EE7004A7EAD /* Sources */ = {
@@ -308,6 +389,7 @@
 		};
 		86715D6020625EE8004A7EAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 160B10DF3B8E5414D087D39C /* Pods-EarthquakeMaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,6 +405,7 @@
 		};
 		86715D6120625EE8004A7EAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE2E2A0F77AEF96328AD8B2C /* Pods-EarthquakeMaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
