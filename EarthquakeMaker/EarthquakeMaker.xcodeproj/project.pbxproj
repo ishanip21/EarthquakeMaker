@@ -12,6 +12,7 @@
 		86715D5820625EE8004A7EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86715D5720625EE8004A7EAD /* Assets.xcassets */; };
 		86715D5B20625EE8004A7EAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86715D5920625EE8004A7EAD /* LaunchScreen.storyboard */; };
 		86715D6F20628C6E004A7EAD /* EMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86715D6E20628C6E004A7EAD /* EMHomeViewController.swift */; };
+		86715D73206296BC004A7EAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86715D72206296BC004A7EAD /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		86715D5A20625EE8004A7EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86715D5C20625EE8004A7EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86715D6E20628C6E004A7EAD /* EMHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMHomeViewController.swift; sourceTree = "<group>"; };
+		86715D72206296BC004A7EAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		86715D6D20626D4B004A7EAD /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				86715D72206296BC004A7EAD /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				86715D6F20628C6E004A7EAD /* EMHomeViewController.swift in Sources */,
 				86715D5120625EE8004A7EAD /* AppDelegate.swift in Sources */,
+				86715D73206296BC004A7EAD /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
