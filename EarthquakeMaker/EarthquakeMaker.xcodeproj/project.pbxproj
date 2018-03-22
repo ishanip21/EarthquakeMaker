@@ -7,17 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		866A136F206379350008EB94 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866A136E206379350008EB94 /* Feature.swift */; };
+		866A13732063805A0008EB94 /* Propertie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866A13722063805A0008EB94 /* Propertie.swift */; };
+		866A1375206380700008EB94 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866A1374206380700008EB94 /* Geometry.swift */; };
+		866A13772063823D0008EB94 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866A13762063823D0008EB94 /* Coordinate.swift */; };
+		866A13792063AE670008EB94 /* Earthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866A13782063AE670008EB94 /* Earthquake.swift */; };
 		86715D5120625EE8004A7EAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86715D5020625EE8004A7EAD /* AppDelegate.swift */; };
 		86715D5620625EE8004A7EAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86715D5420625EE8004A7EAD /* Main.storyboard */; };
 		86715D5820625EE8004A7EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86715D5720625EE8004A7EAD /* Assets.xcassets */; };
 		86715D5B20625EE8004A7EAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86715D5920625EE8004A7EAD /* LaunchScreen.storyboard */; };
 		86715D6F20628C6E004A7EAD /* EMHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86715D6E20628C6E004A7EAD /* EMHomeViewController.swift */; };
 		86715D73206296BC004A7EAD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86715D72206296BC004A7EAD /* Constants.swift */; };
+		86715D772062AD56004A7EAD /* EarthquakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86715D762062AD56004A7EAD /* EarthquakeCell.swift */; };
+		86715D792062AD6B004A7EAD /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86715D782062AD6B004A7EAD /* MapCell.swift */; };
+		86715D7B2062ADFC004A7EAD /* EMMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86715D7A2062ADFC004A7EAD /* EMMapViewController.swift */; };
 		D69A9BB4F050FABC146AC94D /* Pods_EarthquakeMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C79A6988D58DE0DC56975C /* Pods_EarthquakeMaker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		160B10DF3B8E5414D087D39C /* Pods-EarthquakeMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarthquakeMaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EarthquakeMaker/Pods-EarthquakeMaker.debug.xcconfig"; sourceTree = "<group>"; };
+		866A136E206379350008EB94 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		866A13722063805A0008EB94 /* Propertie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Propertie.swift; sourceTree = "<group>"; };
+		866A1374206380700008EB94 /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		866A13762063823D0008EB94 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		866A13782063AE670008EB94 /* Earthquake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earthquake.swift; sourceTree = "<group>"; };
 		86715D4D20625EE8004A7EAD /* EarthquakeMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthquakeMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86715D5020625EE8004A7EAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86715D5520625EE8004A7EAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +39,9 @@
 		86715D5C20625EE8004A7EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86715D6E20628C6E004A7EAD /* EMHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMHomeViewController.swift; sourceTree = "<group>"; };
 		86715D72206296BC004A7EAD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		86715D762062AD56004A7EAD /* EarthquakeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeCell.swift; sourceTree = "<group>"; };
+		86715D782062AD6B004A7EAD /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		86715D7A2062ADFC004A7EAD /* EMMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMMapViewController.swift; sourceTree = "<group>"; };
 		C8C79A6988D58DE0DC56975C /* Pods_EarthquakeMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EarthquakeMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2E2A0F77AEF96328AD8B2C /* Pods-EarthquakeMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EarthquakeMaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-EarthquakeMaker/Pods-EarthquakeMaker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +104,11 @@
 		86715D6A20626D4A004A7EAD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				866A136E206379350008EB94 /* Feature.swift */,
+				866A13722063805A0008EB94 /* Propertie.swift */,
+				866A1374206380700008EB94 /* Geometry.swift */,
+				866A13762063823D0008EB94 /* Coordinate.swift */,
+				866A13782063AE670008EB94 /* Earthquake.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +116,7 @@
 		86715D6B20626D4B004A7EAD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				86715D752062AD1F004A7EAD /* Cells */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -103,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				86715D6E20628C6E004A7EAD /* EMHomeViewController.swift */,
+				86715D7A2062ADFC004A7EAD /* EMMapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,6 +136,15 @@
 				86715D72206296BC004A7EAD /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		86715D752062AD1F004A7EAD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				86715D762062AD56004A7EAD /* EarthquakeCell.swift */,
+				86715D782062AD6B004A7EAD /* MapCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		D7D727AE3DC342DF9D7875FE /* Frameworks */ = {
@@ -235,10 +267,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EarthquakeMaker/Pods-EarthquakeMaker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -252,9 +290,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				866A13732063805A0008EB94 /* Propertie.swift in Sources */,
 				86715D6F20628C6E004A7EAD /* EMHomeViewController.swift in Sources */,
+				866A136F206379350008EB94 /* Feature.swift in Sources */,
 				86715D5120625EE8004A7EAD /* AppDelegate.swift in Sources */,
+				866A13792063AE670008EB94 /* Earthquake.swift in Sources */,
+				86715D772062AD56004A7EAD /* EarthquakeCell.swift in Sources */,
+				86715D7B2062ADFC004A7EAD /* EMMapViewController.swift in Sources */,
 				86715D73206296BC004A7EAD /* Constants.swift in Sources */,
+				866A1375206380700008EB94 /* Geometry.swift in Sources */,
+				86715D792062AD6B004A7EAD /* MapCell.swift in Sources */,
+				866A13772063823D0008EB94 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
