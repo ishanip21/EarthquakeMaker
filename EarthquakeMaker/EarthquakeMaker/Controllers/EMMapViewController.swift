@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import MapKit
 
 class EMMapViewController: UIViewController {
 
+    @IBOutlet weak var mapView: MKMapView!
+    var feature: Feature?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        mapView.mapType = .standard
+        mapView.isZoomEnabled = true
+        mapView.isScrollEnabled = true
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 37.815018, longitude: 144.946014)
+        mapView.addAnnotation(annotation)
     }
 
     override func didReceiveMemoryWarning() {

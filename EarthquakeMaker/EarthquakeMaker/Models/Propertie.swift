@@ -12,29 +12,8 @@ import ObjectMapper
 class Propertie: Mappable {
     var mag: Decimal?
     var place: String?
-    var time: Int?
-    //var updated: Int?
-    var timeZone: Int?
-//    var url: String?
-//    var detail: String?
-//    var felt:Integer?
-//    var cdi: Decimal?
-//    var mmi: Decimal?
-//    var alert: String?
-//    var status: String?
-//    var tsunami: Integer?
-//    var sig:Integer?
-//    var net: String?
-//    var code: String?
-//    var ids: String?
-//    var sources: String?
-//    var types: String?
-//    var nst: Integer?
-//    var dmin: Decimal?
-//    var rms: Decimal?
-//    var gap: Decimal?
-//    var magType: String?
-//    var type: String?
+    var time: Int64?
+    var timeZone: Int64?
     
     required init?(map: Map) {
         
