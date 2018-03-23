@@ -12,13 +12,15 @@ import ObjectMapper
 class Earthquake: Mappable {
     var type: String?
     var features: [Feature]?
+    var boundingBox:[Double]?
     
     required init?(map: Map) {
         
     }
     
     func mapping(map: Map) {
-        type     <- map["type"]
-        features <- map["features"]
+        type        <- map["type"]
+        features    <- map["features"]
+        boundingBox <- map["bbox"]
     }
 }

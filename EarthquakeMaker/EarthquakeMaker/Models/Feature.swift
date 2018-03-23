@@ -20,10 +20,10 @@ class Feature: Mappable {
     }
     
     func mapping(map: Map) {
-        type      <- map["type"]
-        featureId <- map["id"]
-        propertie <- map["properties"]
-        geometry  <- map["geometry"]
+        type        <- map["type"]
+        featureId   <- map["id"]
+        propertie   <- map["properties"]
+        geometry    <- map["geometry"]
     }
 }
 

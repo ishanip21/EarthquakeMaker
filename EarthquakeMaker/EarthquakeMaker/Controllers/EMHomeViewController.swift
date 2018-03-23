@@ -22,20 +22,20 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBOutlet weak var earthquakeTableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var menuView: UIView!
     
     var timer: Timer!
     var selectedMenuType = SelectedMenuType.Map
     var refreshControl: UIRefreshControl!
     var earthquakes: Earthquake?
-    var selectedIndex: Int! = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Earthquakes"
-        
         earthquakeTableView.tableFooterView = UIView()
         
+        //call the API
         callApi()
     }
 
@@ -47,6 +47,7 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: - IBAction
     
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
+        //Changed the tableview cell according to the selected menu. default it is set to Map view
         if sender.selectedSegmentIndex == 0 {
             selectedMenuType = .Map
         } else {
@@ -64,9 +65,10 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     //MARK: - Custom methods
-    
+    //Call the API and JSON response converted into Earthquake object
     private func callApi() {
-        let URL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
+        
+        let URL = Constants.init().apiUrl!
         Alamofire.request(URL).responseObject { (response: DataResponse<Earthquake>) in
             
             self.earthquakes = response.result.value
@@ -78,8 +80,9 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func getDate(date: Int64!) -> String {
+        
         let timeInterval    = Double(date)
-        let earthquakeDate  = Date(timeIntervalSince1970: timeInterval)
+        let earthquakeDate  = Date(timeIntervalSince1970: timeInterval / 1000.0)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd hh:mm a"
@@ -91,6 +94,7 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     @objc func endOfRefeshing() {
+        
         refreshControl.endRefreshing()
         
         timer.invalidate()
@@ -98,7 +102,12 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
         if refreshControl.isRefreshing {
+            //Tableview refreshing clear data and reload tabelView
+            self.earthquakes?.features?.removeAll()
+            self.earthquakeTableView.reloadData()
+            callApi()
             refreshing()
         }
     }
@@ -107,6 +116,7 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         if selectedMenuType == .Map {
             return 1
         } else {
@@ -115,6 +125,7 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if selectedMenuType == .Map {
             let cell:MapCell = tableView.dequeueReusableCell(withIdentifier: "MapCell", for: indexPath) as! MapCell
             
@@ -122,10 +133,15 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 for feature: Feature! in self.earthquakes!.features! {
                     let annotation = MKPointAnnotation()
-                    annotation.coordinate = CLLocationCoordinate2D(latitude: feature!.geometry!.coordinates![0] as! Double, longitude: feature!.geometry!.coordinates![0] as! Double)
+                    annotation.title        = feature?.propertie?.place!
+                    annotation.subtitle     = getDate(date: feature!.propertie!.time)
+                    annotation.coordinate   = CLLocationCoordinate2D(latitude: feature!.geometry!.coordinates![1], longitude: feature!.geometry!.coordinates![0])
                     cell.mapView.addAnnotation(annotation)
                 }
+                
+                cell.mapView.showAnnotations(cell.mapView.annotations, animated: true)
             }
+            
             return cell;
             
         } else {
@@ -139,6 +155,7 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         if selectedMenuType == .Map {
             return view.frame.size.height - 60
         } else {
@@ -150,6 +167,7 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
      // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "MapViewController" {
             if let indexPath = self.earthquakeTableView.indexPathForSelectedRow {
                 let controller = segue.destination as! EMMapViewController
@@ -157,6 +175,4 @@ class EMHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
-    
-    
 }

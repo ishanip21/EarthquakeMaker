@@ -11,7 +11,7 @@ import ObjectMapper
 
 class Geometry: Mappable {
     var type: String?
-    var coordinates: [AnyObject]?
+    var coordinates: [Double]?
     
     required init?(map: Map) {
         

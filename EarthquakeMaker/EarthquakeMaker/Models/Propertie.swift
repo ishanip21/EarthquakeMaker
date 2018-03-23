@@ -13,7 +13,7 @@ class Propertie: Mappable {
     var mag: Decimal?
     var place: String?
     var time: Int64?
-    var timeZone: Int64?
+    var timeZone: String?
     
     required init?(map: Map) {
         
